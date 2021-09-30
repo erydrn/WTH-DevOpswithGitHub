@@ -36,7 +36,7 @@ jobs:
        
       #  Create and Deploy App with ARM Deploy 
       - name: ARM Deploy
-      - uses: azure/arm-deploy@v1
+        uses: azure/arm-deploy@v1
         with:
           resourceGroupName: ${{ env.RESOURCEGROUPNAME }}
           template: WTH-DevOpswithGitHub/ARM-Templates/container-webapp-template.json
