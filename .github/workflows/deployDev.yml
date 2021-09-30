@@ -39,7 +39,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           resourceGroupName: WTH-DevOpswithGitHub
-          template: ././WTH-DevOpswithGitHub/ARM-Templates/container-webapp-template.json
+          template: ./ARM-Templates/container-webapp-template.json
           parameters: storageAccountType=Standard_LRS
       
       # Runs a single command using the runners shell
