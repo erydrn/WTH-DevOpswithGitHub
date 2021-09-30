@@ -42,7 +42,6 @@ jobs:
           template: ./azuredeploy.json
           parameters: storageAccountType=Standard_LRS
       
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Deployment Finished!
