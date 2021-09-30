@@ -38,7 +38,7 @@ jobs:
       - name: ARM Deploy
         uses: azure/arm-deploy@v1
         with:
-          resourceGroupName: ${{ env.RESOURCEGROUPNAME }}
+          resourceGroupName: ${{ env.AZURE_ENV.RESOURCEGROUPNAME }}
           template: WTH-DevOpswithGitHub/ARM-Templates/container-webapp-template.json
           parameters: storageAccountType=Standard_LRS
       
