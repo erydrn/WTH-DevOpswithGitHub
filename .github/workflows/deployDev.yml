@@ -44,8 +44,7 @@ jobs:
         with:
           resourceGroupName: WTH-DevOpswithGitHub
           template: ArmTemplates/container-webapp-template-dev.json
-          parameters: storageAccountType=Standard_LRS
-      
+          
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Deployment Finished!
