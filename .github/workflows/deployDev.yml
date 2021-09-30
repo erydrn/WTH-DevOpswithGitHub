@@ -29,9 +29,14 @@ jobs:
         with:
           creds: ${{secrets.AZURE_CREDENTIALS}}
           enable-AzPSSession: true
-        
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+       
+      #  Create and Deploy App with ARM Deploy 
+      - name: ARM Deploy
+      - uses: azure/arm-deploy@v1
+        with:
+          resourceGroupName: ${{ env.ResourceGroupName }}
+          template: ./azuredeploy.json
+          parameters: storageAccountType=Standard_LRS
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
