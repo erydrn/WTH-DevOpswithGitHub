@@ -24,6 +24,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
     
       # Azure Login with Service Principal   
       - name: Login via Az module
@@ -41,7 +43,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           resourceGroupName: WTH-DevOpswithGitHub
-          template: ./ArmTemplates/container-webapp-template-dev.json
+          template: ArmTemplates/container-webapp-template-dev.json
           parameters: storageAccountType=Standard_LRS
       
       # Runs a single command using the runners shell
