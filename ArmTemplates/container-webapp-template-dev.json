@@ -23,11 +23,11 @@
             "type": "String"
         },
         "registryName": {
-            "defaultValue": "erydrn-devopsreg",
+            "defaultValue": "erydrndevopsreg",
             "type": "String"
         },
         "imageName": {
-            "defaultValue": "erydrn-devopsimage",
+            "defaultValue": "erydrndevopsimage",
             "type":"String"
         },
         "registryLocation": {
